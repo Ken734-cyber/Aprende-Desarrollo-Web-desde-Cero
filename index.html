@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Desarrollo Web | HTML, CSS & JS</title>
+    <!-- Vinculamos el archivo CSS externo que está dentro de la carpeta css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <header>
+        <nav>
+            <a href="#inicio" class="logo"><strong>AprendeWeb</strong></a>
+            <ul>
+                <li><a href="#html">HTML5</a></li>
+                <li><a href="#css">CSS3 (Flexbox)</a></li>
+                <li><a href="#js">JavaScript</a></li>
+                <li><a href="#registro">Unirme</a></li>
+            </ul>
+        </nav>
+        
+        <section id="inicio" class="hero">
+            <h1>Aprende Desarrollo Web desde Cero</h1>
+            <p>Guía interactiva completa con teoría, laboratorios prácticos y ejercicios en vivo.</p>
+        </section>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- MÓDULO 1: HTML5 SEMÁNTICO -->
+        <section id="html">
+            <h2>Módulo 1: Lenguaje de Marcado (HTML5)</h2>
+            <p>HTML es la columna vertebral que define la estructura y el contenido de la web.</p>
+
+            <article class="card">
+                <h3>1. Estructura Semántica Recomendada</h3>
+                <p>Aprende a usar etiquetas con significado para mejorar la accesibilidad y el SEO:</p>
+                <ul>
+                    <li><code>&lt;header&gt;</code>: Cabeceras del sitio o secciones.</li>
+                    <li><code>&lt;nav&gt;</code>: Barras de navegación con enlaces.</li>
+                    <li><code>&lt;main&gt;</code>: Contenido principal único de la página.</li>
+                    <li><code>&lt;article&gt;</code>: Bloques de contenido autónomos (tarjetas, noticias).</li>
+                    <li><code>&lt;footer&gt;</code>: Pie de página con créditos e información legal.</li>
+                </ul>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- MÓDULO 2: CSS3 Y LABORATORIO FLEXBOX -->
+        <section id="css">
+            <h2>Módulo 2: Estilos y Maquetación (CSS3)</h2>
+            <p>CSS le da personalidad, colores, tipografía y distribución a nuestro sitio.</p>
+
+            <!-- LABORATORIO PRÁCTICO INTERACTIVO -->
+            <article class="card practica-box">
+                <h3>🏋️‍♂️ Laboratorio Práctico: Desafío Flexbox</h3>
+                <p>Analiza esta tarjeta de perfil construida 100% con reglas de Flexbox:</p>
+
+                <div class="demostracion-container">
+                    <!-- Componente demo de la tarjeta -->
+                    <div class="card-demo">
+                        <div class="perfil-header">
+                            <img src="https://via.placeholder.com/70" alt="Foto de perfil">
+                            <h4>Alex Dev</h4>
+                            <p>Estudiante Web</p>
+                        </div>
+
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <h5>12</h5>
+                                <p>Proyectos</p>
+                            </div>
+                            <div class="stat">
+                                <h5>HTML</h5>
+                                <p>Nivel 1</p>
+                            </div>
+                            <div class="stat">
+                                <h5>CSS</h5>
+                                <p>En curso</p>
+                            </div>
+                        </div>
+
+                        <div class="acciones">
+                            <button class="btn btn-principal">Seguir</button>
+                            <button class="btn btn-secundario">Mensaje</button>
+                        </div>
+                    </div>
+
+                    <!-- Puntos clave del código -->
+                    <div class="codigo-explicacion">
+                        <h4>Puntos clave de Flexbox aplicados:</h4>
+                        <ul>
+                            <li><code>display: flex</code> activa la caja flexible.</li>
+                            <li><code>justify-content: space-between</code> distribuye las 3 estadísticas equitativamente.</li>
+                            <li><code>align-items: center</code> centra la foto y el texto de la cabecera.</li>
+                            <li><code>flex: 1</code> en los botones hace que ambos tengan exactamente el mismo tamaño.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- MÓDULO 3: REGISTRO E INTERACCIÓN -->
+        <section id="registro">
+            <h2>Módulo 3: Formulario de Estudiante</h2>
+            <p>Registra tu progreso para recibir contenido y nuevos ejercicios.</p>
+
+            <article class="card">
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Registro de Estudiante</legend>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Alex Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" placeholder="usuario@correo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nivel">Nivel actual:</label>
+                            <select id="nivel" name="nivel">
+                                <option value="principiante">Principiante (Aprendiendo HTML/CSS)</option>
+                                <option value="intermedio">Intermedio (Listo para JS)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-principal btn-full">¡Guardar mi Progreso!</button>
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+
+        <!-- SECCIÓN 3: JAVASCRIPT EN EL INDEX.HTML -->
+<section id="js">
+    <h2>Módulo 3: Lógica e Interacción (JavaScript)</h2>
+    <p>JavaScript le permite a tu sitio responder a las acciones del usuario en tiempo real.</p>
+
+    <article class="card">
+        <h3>Conceptos Básicos de JS para Empezar</h3>
+        <ul>
+            <li><code>Variables (const / let):</code> Contenedores para guardar datos (textos, números, estados).</li>
+            <li><code>DOM (Document Object Model):</code> La representación en memoria de tu HTML que JS puede modificar.</li>
+            <li><code>Eventos (addEventListener):</code> Escuchadores que detectan clics, pulsaciones de teclas o envíos de formulario.</li>
+            <li><code>Funciones:</code> Bloques de código reutilizables que ejecutan tareas específicas.</li>
+        </ul>
+    </article>
+</section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Plataforma Educativa Web. Proyecto de aprendizaje de HTML, CSS y JS.</p>
+    </footer>
+
+    <!-- Vincularemos JavaScript en el siguiente paso aquí -->
+    <script src="index.js"></script>
+</body>
+</html>
