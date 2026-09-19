@@ -1,0 +1,311 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-nav: rgba(15, 23, 42, 0.85);
+    
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    
+    --primary: #38bdf8;
+    --primary-hover: #0284c7;
+    --border-color: #334155;
+    
+    --radius: 12px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. CABECERA Y NAVEGACIÓN
+   ========================================================================== */
+header {
+    background: radial-gradient(circle at top, #1e293b 0%, var(--bg-main) 100%);
+    padding-bottom: 2rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: var(--bg-nav);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+nav .logo {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+nav ul a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA DE CONTENIDO (MAIN & CARDS)
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+section > p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--border-color);
+    margin: 2.5rem 0;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--primary);
+}
+
+code {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* ==========================================================================
+   4. LABORATORIO FLEXBOX INTERACTIVO
+   ========================================================================== */
+.practica-box {
+    border: 1px solid var(--primary);
+    background: linear-gradient(135deg, var(--bg-card) 0%, #0f172a 100%);
+}
+
+.demostracion-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.card-demo {
+    background-color: #0f172a;
+    width: 280px;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.perfil-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.perfil-header img {
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e293b;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat h5 {
+    color: var(--primary);
+}
+
+.stat p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.acciones {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-principal {
+    background-color: var(--primary);
+    color: #0f172a;
+}
+
+.btn-principal:hover {
+    background-color: var(--primary-hover);
+    color: white;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+}
+
+.codigo-explicacion {
+    flex: 1;
+    min-width: 250px;
+}
+
+.codigo-explicacion ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   5. FORMULARIO
+   ========================================================================== */
+form fieldset {
+    border: none;
+}
+
+form legend {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-main);
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary);
+}
+
+/* ==========================================================================
+   6. FOOTER Y RESPONSIVE
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #090d16;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
